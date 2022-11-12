@@ -44,11 +44,13 @@ const DogListWithInput = () => {
           Submit
         </button>
       </div>
-      {dogImage && (
-        <div className={styles.dogImageContent}>
+      <div className={styles.dogImageContent}>
+        {dogImage ? (
           <img src={dogImage} />
-        </div>
-      )}
+        ) : (
+          <div className={styles.imagePlaceholder}>Placeholder</div>
+        )}
+      </div>
     </div>
   );
 };
