@@ -14,15 +14,15 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/dogs-search">Home</Link>
-              </li>
-            </ul>
-          </nav>
-
           <Routes>
+            <Route
+              path="/"
+              element={
+                <div>
+                  <Link to="/dogs-search">Home</Link>
+                </div>
+              }
+            />
             <Route path="/dogs-search" element={<DogListWithInput />} />
           </Routes>
         </div>
