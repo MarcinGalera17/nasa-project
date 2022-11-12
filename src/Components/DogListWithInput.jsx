@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./DogListWithInput.module.scss";
-
+import { Link } from "react-router-dom";
 const DogListWithInput = () => {
   const [breedName, setbreedName] = useState("");
   const [breedList, setBreedList] = useState([]);
@@ -30,6 +30,7 @@ const DogListWithInput = () => {
 
   return (
     <div className={styles.wrapper}>
+      <Link to="/">Back to Home</Link>
       <div className={styles.inputAndSelectWrapper}>
         <select onChange={(e) => setbreedName(e.target.value)}>
           {breedList.map((breed) => {
